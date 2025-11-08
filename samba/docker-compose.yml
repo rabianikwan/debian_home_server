@@ -1,0 +1,13 @@
+services:
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    environment:
+      NAME: "SAMBA"
+      USER: "USER" #change user
+      PASS: "PASS" #change pass
+    ports:
+      - 445:445
+    volumes:
+      - ./local:/storage #change "./local" to proper path
+    restart: always
